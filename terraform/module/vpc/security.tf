@@ -46,7 +46,28 @@ resource "aws_vpc_security_group_ingress_rule" "node_port" {
 resource "aws_vpc_security_group_egress_rule" "default" {
   ip_protocol       = "-1"
   cidr_ipv4         = "0.0.0.0/0"
-  from_port         = 0
+  from_port         = -1
   security_group_id = aws_security_group.main.id
-  to_port           = 0
+  to_port           = -1
+}
+
+resource "aws_security_group" "home" {
+  vpc_id = aws_vpc.main.id
+}
+
+resource "aws_vpc_security_group_ingress_rule" "home" {
+  ip_protocol = "tcp"
+  # cidr_ipv4         = var.home_ip
+  cidr_ipv4         = "0.0.0.0/0"
+  from_port         = 22
+  security_group_id = aws_security_group.home.id
+  to_port           = 22
+}
+
+resource "aws_vpc_security_group_egress_rule" "home" {
+  ip_protocol       = "-1"
+  cidr_ipv4         = "0.0.0.0/0"
+  from_port         = -1
+  security_group_id = aws_security_group.home.id
+  to_port           = -1
 }

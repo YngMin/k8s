@@ -1,0 +1,9 @@
+ami                       = "ami-0eb302fcc77c2f8bd"
+key_name                  = "k8s"
+environment               = "dev"
+master_availability_zone  = "ap-northeast-2a"
+master_instance_type      = "t3.xlarge"
+worker_availability_zones = ["ap-northeast-2a", "ap-northeast-2b"]
+worker_count              = 2
+worker_instance_type      = "t3.large"
+local_pem_path            = "~/.ssh/k8s.pem"

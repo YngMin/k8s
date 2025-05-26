@@ -24,7 +24,7 @@ resource "aws_vpc_endpoint_policy" "s3_endpoint_policy" {
         Effect    = "Allow"
         Principal = "*",
         Action    = ["s3:GetObject"],
-        Resource  = "arn:aws:s3:::al2023-repos-ap-northeast-1-de612dc2/*"
+        Resource  = "arn:aws:s3:::al2023-repos-ap-northeast-2-de612dc2/*"
       }
     ]
   })

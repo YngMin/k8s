@@ -21,3 +21,28 @@ variable "cidr_numeral" {
   type        = number
   default     = 0
 }
+
+variable "bastion_ami" {
+  description = "AMI ID for the bastion host"
+  type        = string
+}
+
+variable "bastion_availability_zone" {
+  description = "Availability zone for the bastion host"
+  type        = string
+}
+
+variable "bastion_instance_type" {
+  description = "Instance type for the bastion host"
+  type        = string
+}
+
+variable "bastion_key_name" {
+  description = "Key name for the bastion host"
+  type        = string
+}
+
+variable "home_ip" {
+  description = "Home IP address for SSH access to the bastion host"
+  type        = string
+}

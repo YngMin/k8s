@@ -1,0 +1,5 @@
+bastion_ami               = "ami-0eb302fcc77c2f8bd"
+bastion_availability_zone = "ap-northeast-2a"
+bastion_instance_type     = "t3.micro"
+bastion_key_name          = "k8s"
+home_ip                   = "118.235.5.149/32"

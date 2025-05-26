@@ -36,7 +36,7 @@ resource "aws_nat_gateway" "main" {
   }
 
   tags = {
-    Name = "${var.account_name}-${var.environment}-${count.index}}"
+    Name = "${var.account_name}-${var.environment}-${count.index}"
   }
 }
 

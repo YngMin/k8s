@@ -21,3 +21,7 @@ output "private_db_subnet_ids" {
 output "vpc_cidr_block" {
   value = aws_vpc.main.cidr_block
 }
+
+output "bastion_public_ip" {
+  value = aws_instance.bastion.public_ip
+}
